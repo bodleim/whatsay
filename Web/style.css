@@ -1,0 +1,57 @@
+/* @font-face {
+    font-family: 'bmjua';
+    src: url('./font/bmjua.ttf') format('truetype');
+} */
+
+h1 {
+  font-family: 'Nanum Myeongjo', serif;
+}
+
+.title {
+    text-align: center;
+    padding-top: 9%;
+}
+
+.user_input_area {
+    font-size: 0.7rem;
+    text-align: center;
+    display: block;
+    float: left;
+}
+
+.form-floating mb-3t {
+  display: inline-block;
+  width: auto;
+}
+
+.박 {
+  float: right;
+}
+
+/* ex */
+
+
+/* .search_area{
+  width: auto;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 24px;
+}
+
+.text {
+  margin-left: auto;   
+  margin-right: auto; 
+}
+
+.search_area > form > input{
+  border: gray 1px solid;
+  width: 250px;
+  height: 40px;
+  padding-left: 10px;
+}
+
+.search_area > form > span {
+  width: 50px;
+  font-weight: bold;
+  cursor: pointer;
+} */
