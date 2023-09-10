@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="kor">
+<html lang="ko">
 <head>
   <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
@@ -12,54 +12,22 @@
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">박범준</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">당구 ㅈ밥</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">볼링 ㅈ밥</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  코딩ㅈ밥
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
+
+  <div class="main">
       
-    <h1 class="title">정현: 볼링, 당구 좆밥</h1>
+      
+    <h1 class="title">먼말 하려고 했더랑</h1>
 
     <div class="user_input_area">
-      <div class="form-floating mb-3t">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <!-- <label for="floatingInput">당신의 잊은 기억을 입력해주세요</label> -->   
+      <div class=" col-sm-6">
+        <div class="form-floating mb-3t">
+          <input type="email" class="form-control" id="floatingInput" placeholder="">
+          <label for="floatingInput" class="input_msg">당신의 잊은 기억을 입력해주세요</label>   
+        </div>
       </div>
-      <div class="박">
-        <span type="button" class="btn btn-outline-primary 박범준버튼">확인</span> 
-      </div>
+    </div>
+    <div class="input_btn">
+        <span type="button" class="btn btn-outline-primary btn-lg" onclick="location.href='./page/show_texts.html'">확인</span>
     </div>
     
     <!-- <div class="header" id="link_header">
@@ -70,5 +38,6 @@
         </form>
       </div>
     </div> -->
+  </div>
 </body>
 </html>

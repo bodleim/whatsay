@@ -2,6 +2,16 @@
     font-family: 'bmjua';
     src: url('./font/bmjua.ttf') format('truetype');
 } */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(240, 240, 240);
+}
+
 
 h1 {
   font-family: 'Nanum Myeongjo', serif;
@@ -10,23 +20,35 @@ h1 {
 .title {
     text-align: center;
     padding-top: 9%;
+    font-size: 3rem;
 }
 
 .user_input_area {
+    display: flex !important;
+    justify-content: center !important;
     font-size: 0.7rem;
-    text-align: center;
-    display: block;
-    float: left;
+    padding-top: 6%;
+    /* margin: 0 auto  !important; */
+    /*
+    width: 80% !important;
+    height: 60% !important;
+    */
 }
 
-.form-floating mb-3t {
-  display: inline-block;
-  width: auto;
+.input_btn {
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
 }
 
-.박 {
-  float: right;
-}
+/* 
+.main {
+  background-image: url("image/back1.jpg");
+  background-size: 100% 100%;
+} */
+
+
+
 
 /* ex */
 
@@ -55,3 +77,108 @@ h1 {
   font-weight: bold;
   cursor: pointer;
 } */
+/* main styles */
+.switch {
+    width: 24rem;
+    position: relative;
+  }
+  
+  .switch input {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .switch input:checked {
+    z-index: 1;
+  }
+  
+  .switch input:checked + label {
+    opacity: 1;
+    cursor: default;
+  }
+  
+  .switch input:not(:checked) + label:hover {
+    opacity: 0.5;
+    transition: opacity 0.25s ease;
+  }
+  
+  .switch label {
+    color: rgb(0, 0, 0);
+    opacity: 0.33;
+    transition: opacity 0.25s ease;
+    cursor: pointer;
+  }
+  
+  .switch .toggle-outside {
+    height: 100%;
+    border-radius: 2rem;
+    padding: 0.25rem;
+    overflow: hidden;
+    transition: 0.25s ease all;
+  }
+  
+  .switch .toggle-inside {
+    border-radius: 5rem;
+    background: #4a4a4a;
+    position: absolute;
+    transition: 0.25s ease all;
+  }
+  
+  /* Horizontal switch */
+  .switch--horizontal {
+    width: 18rem;
+    height: 3rem;
+    /* margin: 0 auto; */
+    font-size: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .switch--horizontal input {
+    height: 3rem;
+    width: 6rem;
+    left: 6rem;
+    margin: 0;
+  }
+  
+  .switch--horizontal label {
+    font-size: 1.5rem;
+    line-height: 3rem;
+    display: inline-block;
+    width: 6rem;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .switch--horizontal label:last-of-type {
+    margin-left: 6rem;
+  }
+  
+  .switch--horizontal .toggle-outside {
+    background: white;
+    position: absolute;
+    width: 6rem;
+    left: 6rem;
+  }
+  
+  .switch--horizontal .toggle-inside {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  
+  .switch--horizontal input:checked ~ .toggle-outside .toggle-inside {
+    left: 0.25rem;
+  }
+  
+  .switch--horizontal input ~ input:checked ~ .toggle-outside .toggle-inside {
+    left: 3.25rem;
+  }
+  
+  .display_type_switch {
+    display: flex;
+    justify-content: right;
+    padding-top: 5%;
+  }
