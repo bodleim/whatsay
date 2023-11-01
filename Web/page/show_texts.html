@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
     <title>먼말 하려고 했더랑</title>
 </head>
-<body>
-
-    <h1 class="title">먼말 하려고 했더랑</h1>
+<body class="show_texts_body">
+    <h1 class="show_title">먼말 하려고 했더랑</h1>
     
-    <div class="display_type_switch">
+    <!-- <div class="display_type_switch">
         <div class="switch switch--horizontal">
             <input id="radio-a" type="radio" name="first-switch" checked>
             <label for="radio-a">단어</label>
@@ -20,6 +19,13 @@
               <span class="toggle-inside"></span>
             </span>
           </div>
+    </div> -->
+    <div class="display_type_switch">
+      <div class="toggle_word">단어</div>
+      <input type="checkbox" id="switch" /><label for="switch">Toggle</label>
+      <div class="toggle_word">문장</div>
     </div>
+
+    
 </body>
 </html>
