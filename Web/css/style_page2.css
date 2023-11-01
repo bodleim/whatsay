@@ -3,9 +3,15 @@
     padding: 0;
 }
 
-body {
+/* body {
     background-color: rgb(0, 0, 0);
+} */
+
+.index2.body{
+    /* background-image :url('/index2_back.jpg'); */
+    background: linear-gradient(rgb(0,0,0,0.8),rgb(0,0,0,0.8)),url(./image/room.jpg);
 }
+
 
 .title {
     color: aliceblue;
@@ -93,75 +99,4 @@ body {
 
 
 
-/* show_texts css */
 
-.show_texts_body {
-  background-color: #000000;
-}
-
-.show_title {
-  color: #bacbda;
-  display: flex;
-  margin-top: 8%;
-  font-size: 3rem;
-  font-weight: bold;
-  justify-content: center;
-}
-
-/* toggle css */
-
-input[type=checkbox]{
-  height: 0;
-  width: 0;
-  visibility: hidden;
-}
-
-label {
-  cursor: pointer;
-  text-indent: -9999px;
-  width: 100px;
-  height: 54px;
-  background: #23837c;
-  display: block;
-  border-radius: 100px;
-  position: relative;
-}
-
-label:after {
-  content: '';
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 45px;
-  height: 45px;
-  background: #fff;
-  border-radius: 90px;
-  transition: 0.3s;
-}
-
-input:checked + label {
-  background: #6eada9;
-}
-
-input:checked + label:after {
-  left: calc(100% - 5px);
-  transform: translateX(-100%);
-}
-
-label:active:after {
-  width: 85px;
-}
-
-.display_type_switch{
-  display: flex;
-  margin-left: 80%;
-}
-
-.toggle_word{
-  font-size: large;
-  color: #bacbda;
-  margin-left: 13px;
-  margin-right: 13px;
-  text-align: center;
-  padding : 18px 0;
-}

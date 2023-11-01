@@ -5,9 +5,10 @@ const port = 5400;
 
 app.use(express.static('../Web/page'));
 app.use(express.static('../Web/css'));
+app.use(express.static('../Web/image'));
 
 app.get('/', (req, res) => {
-    const filePath = path.join(__dirname, '../Web/page/index2.html');
+    const filePath = path.join(__dirname, '../Web/page/index.html');
     res.sendFile(filePath);
 });
 
