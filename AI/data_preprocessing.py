@@ -1,8 +1,7 @@
 import time
 import re
-from tkinter import *
 
-# Preprocessing
+# 데이터 전처리
 path = input("데이터셋의 경로를 입력해주세요 : ")
 data = open(path, "r", encoding="UTF8")
 print("데이터를 불러왔습니다.")
@@ -30,7 +29,7 @@ print("제거 완료\n\n")
 time.sleep(0.5)
 
 print("[Process 4]\n모든 쉼표를 제거합니다.")
-texts = texts.replace(",","")
+texts = texts.replace(",", "")
 print("제거 완료\n\n")
 time.sleep(0.5)
 
@@ -68,9 +67,8 @@ for line in lines:
 
 # 라벨 순서대로 데이터를 정렬
 sorted_lines = []
-for label in range(len(label_groups)):
-    if label in label_groups:
-        sorted_lines.extend(sorted(label_groups[label]))
+for label in sorted(label_groups.keys()):
+    sorted_lines.extend(sorted(label_groups[label]))
 
 # 정렬된 데이터에 헤더를 다시 추가
 sorted_lines.insert(0, header)

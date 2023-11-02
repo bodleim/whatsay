@@ -11,20 +11,27 @@
         font-style: normal;
     }
 
+    @font-face {
+        font-family: 'ImcreSoojin';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+
 
 
 .show_texts_body {
-    background-color: #000000;
+    background-color: #201e22;
 }
 
 .show_title {
-    color: #bacbda;
+    color: #dcc1b0;
     display: flex;
-    margin-top: 5%;
+    margin-top: 5%; 
     font-size: 3rem;
     font-weight: bold;
     justify-content: center;
-    font-family:'DNFBitBitv2';
+    font-family: 'ImcreSoojin';
     /* font-family:'DNFBitBitv2'; */
     /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
 }
@@ -93,13 +100,20 @@ label:active:after {
 .word_box {
     margin-top: -15px;
     z-index: 2;
+    color: #ffffff;
+    text-align : center;
+    line-height : 90px;
+    font-family: 'ImcreSoojin';
+    
 }
 
 .box{
-    background-color: #bacbdaef;
+    background-color:  #869dab;;
     width: 100px;
     height: 90px;
     border-radius:80px;
+    box-shadow: -5px -5px 5px -5px #333;
+    opacity: 0;
 }
 
 
@@ -276,7 +290,7 @@ label:active:after {
 }
 
 .l_box1{
-    background-color: #dd2424a5;
+    background-color: #bacbdaef;
     border-radius:80px;
     width: 700px;
     height: 70px;
@@ -285,7 +299,7 @@ label:active:after {
 }
 
 .l_box2 {
-    background-color: #dd2424a5;
+    background-color: #bacbdaef;
     border-radius:80px;
     width: 700px;
     height: 70px;
@@ -294,7 +308,7 @@ label:active:after {
 }
 
 .l_box3 {
-    background-color: #dd2424a5;
+    background-color: #bacbdaef;
     border-radius:80px;
     width: 700px;
     height: 70px;
@@ -303,7 +317,7 @@ label:active:after {
 }
 
 .l_box4 {
-    background-color: #dd2424a5;
+    background-color: #bacbdaef;
     border-radius:80px;
     width: 700px;
     height: 70px;
@@ -312,7 +326,7 @@ label:active:after {
 }
 
 .l_box5 {
-    background-color: #dd2424a5;
+    background-color: #bacbdaef;
     border-radius:80px;
     width: 700px;
     height: 70px;
@@ -341,10 +355,10 @@ label:active:after {
     z-index: 1;
 }
 
-.path2 {
+.path {
     stroke-dasharray: 7000;
     stroke-dashoffset: 8000;
-    animation: draw 7s linear forwards;
+    animation: draw 7s linear infinite;
 }
 
 @keyframes draw {
