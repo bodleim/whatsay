@@ -596,3 +596,22 @@ textarea {
   margin-top: -480px;
   margin-left: 410px;
 }
+
+
+.sogae1 {
+  background-color: #4081F3;
+  color: antiquewhite;
+  width: 25%;
+  font-size: large;
+  margin-left: 57%;
+  margin-top: 14%;
+}
+
+.sogae2 {
+  background-color: #4feaea;
+  color: antiquewhite;
+  width: 25%;
+  font-size: large;
+  margin-left: 21%;
+  margin-top: 5%;
+}

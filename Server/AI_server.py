@@ -24,10 +24,10 @@ def predict_text():
     print("입력값: " + input_text)
 
     pred_class = whatSayPredict(input_text)
-    pred_class = int(pred_class)  # int() 함수로 int64를 일반 정수로 변환합니다.
-    noun_collect = get_nouns_for_class(pred_class)
+    pred_class = int(pred_class)
+    #noun_collect = get_nouns_for_class(pred_class)
 
-    result = {"class": pred_class, "noun_words": noun_collect}
+    result = pred_class
     return jsonify(result)
 
 @app.route('/getnoun/', methods=['GET'])
