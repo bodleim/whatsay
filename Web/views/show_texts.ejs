@@ -10,13 +10,15 @@
     
     <script>
       $(document).ready(function(){
-        $('.sent_box').css('display', 'none');
+        $('.sent_box').animate({ opacity: 0 });
+        //$('#switch').click(toggle_click);
       })
     </script>
 
     <script>
-      $(window).ready(function () {
-    $('.sent_box').css('display', 'none');
+      var toggle_status = 0;
+    $(window).ready(function () {
+    $('.sent_box').animate({ opacity: 0 });
 
     var boxIndexes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
       
@@ -33,23 +35,35 @@
     $(boxSelector)
       .delay(delay)
       .animate({ opacity: 1 }, 500); // animate 함수를 사용하여 opacity를 변경
-    
     // 다음 box의 delay를 더해줌
     delay += 70;
     }
     })
 
     function shuffleArray(array) {
-    for (var i = array.length - 1; i > 0; i--) {
-var j = Math.floor(Math.random() * (i + 1));
-var temp = array[i];
-array[i] = array[j];
-array[j] = temp;
-}
-    return array;
-    }
+      for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+        }
+      return array;
+      }
 
-    </script>
+      function toggle_click() {
+  if (toggle_status == 0) {
+    $('.word_box').animate({ opacity: 0 }, 500);
+    $('.sent_box').animate({ opacity: 1 }, 500);
+    toggle_status = 1;
+  } else if (toggle_status == 1) {
+    $('.word_box').animate({ opacity: 1 }, 500);
+    $('.sent_box').animate({ opacity: 0 }, 500);
+    toggle_status = 0;
+  }
+}
+
+      
+      </script>
     <title>먼말 하려고 했더랑</title>
 </head>
 <body class="show_texts_body">
@@ -57,7 +71,7 @@ array[j] = temp;
 
     <div class="display_type_switch">
       <div class="toggle_word">단어</div>
-      <input type="checkbox" id="switch" /><label for="switch">Toggle</label>
+      <input type="checkbox" id="switch" onclick="toggle_click()"/><label for="switch">Toggle</label>
       <div class="toggle_word">문장</div>
     </div>
 
