@@ -18,31 +18,26 @@
       $(window).ready(function () {
     $('.sent_box').css('display', 'none');
 
-    // 서버로부터 받은 배열
-    var nouns = ["가", "나", "다", "라", "마", "사", "아", "자", "차", "카", "타", "파", "하", "A", "B", "C", "D", "E", "F", "G"];
-
+    var boxIndexes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+      
     // 배열을 무작위로 섞음
-    nouns = shuffleArray(nouns);
-
+    boxIndexes = shuffleArray(boxIndexes);
+      
     // 각 box를 순차적으로 fadeIn 처리
     var delay = 0;
-    for (var i = 0; i < nouns.length; i++) {
-      var noun = nouns[i];
-      var boxIndex = i + 1;
-      var boxSelector = '.box' + boxIndex;
-
-      // 화면에 텍스트를 표시
-      $(boxSelector).text(noun);
-
-      // fadeIn 처리를 하되, delay를 주어 순차적으로 나타나도록 함
-      $(boxSelector)
-        .delay(delay)
-        .animate({ opacity: 1 }, 500);
-
-      // 다음 box의 delay를 더해줌
-      delay += 70;
+    for (var i = 0; i < boxIndexes.length; i++) {
+    var boxIndex = boxIndexes[i];
+    var boxSelector = '.box' + boxIndex;
+    
+    // fadeIn 처리를 하되, delay를 주어 순차적으로 나타나도록 함
+    $(boxSelector)
+      .delay(delay)
+      .animate({ opacity: 1 }, 500); // animate 함수를 사용하여 opacity를 변경
+    
+    // 다음 box의 delay를 더해줌
+    delay += 70;
     }
-  })
+    })
 
     function shuffleArray(array) {
     for (var i = array.length - 1; i > 0; i--) {
@@ -53,6 +48,7 @@ array[j] = temp;
 }
     return array;
     }
+
     </script>
     <title>먼말 하려고 했더랑</title>
 </head>
@@ -67,35 +63,27 @@ array[j] = temp;
 
     <div class="word_box">
       <div class="line1">
-        <div class="box box1">가</div>
-        <div class="box box2">나</div>
-        <div class="box box3">다</div>
-        <div class="box box4">라</div>
-        <div class="box box5">마</div>
+        <% for (var i = 0; i < 5; i++) { %>
+          <div class="box box<%= i + 1 %>"><%= nouns[i] %></div>
+        <% } %>
       </div>
-
+      
       <div class="line2">
-        <div class="box box6">사</div>
-        <div class="box box7">아</div>
-        <div class="box box8">자</div>
-        <div class="box box9">차</div>
-        <div class="box box10">카</div>
+        <% for (var i = 5; i < 10; i++) { %>
+          <div class="box box<%= i + 1 %>"><%= nouns[i] %></div>
+        <% } %>
       </div>
-
+      
       <div class="line3">
-        <div class="box box11">타</div>
-        <div class="box box12">파</div>
-        <div class="box box13">하</div>
-        <div class="box box14">A</div>
-        <div class="box box15">B</div>
+        <% for (var i = 10; i < 15; i++) { %>
+          <div class="box box<%= i + 1 %>"><%= nouns[i] %></div>
+        <% } %>
       </div>
-
+      
       <div class="line4">
-        <div class="box box16">C</div>
-        <div class="box box17">D</div>
-        <div class="box box18">E</div>
-        <div class="box box19">F</div>
-        <div class="box box20">G</div>
+        <% for (var i = 15; i < 20; i++) { %>
+          <div class="box box<%= i + 1 %>"><%= nouns[i] %></div>
+        <% } %>
       </div>
     </div>
 

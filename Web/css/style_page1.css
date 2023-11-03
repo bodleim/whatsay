@@ -599,7 +599,6 @@ textarea {
 
 
 .sogae1 {
-  background-color: #4081F3;
   color: antiquewhite;
   width: 25%;
   font-size: large;
@@ -608,10 +607,9 @@ textarea {
 }
 
 .sogae2 {
-  background-color: #4feaea;
   color: antiquewhite;
   width: 25%;
-  font-size: large;
+  font-size:medium;
   margin-left: 21%;
-  margin-top: 5%;
+  margin-top: 3.4%;
 }

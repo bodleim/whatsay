@@ -6,6 +6,8 @@ const http = require('http');
 const $ = require('jquery');
 const querystring = require('querystring');
 
+app.use
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
@@ -14,11 +16,11 @@ app.use(express.static('../Web/css'));
 app.use(express.static('../Web/image'));
 
 app.get('/', (req, res) => {
-    res.render('index'); // 렌더링할 EJS 템플릿 파일의 이름 (index.ejs)
+    res.render('index.ejs'); // 렌더링할 EJS 템플릿 파일의 이름 (index.ejs)
 });
 
-app.get('/index2.ejs', (req, res) => {
-    res.render('index2');
+app.get('/index2', (req, res) => {
+    res.render('index2.ejs');
 });
 
 
@@ -42,7 +44,9 @@ app.get('/showtexts', (req, res) => {
 
         response.on('end', () => {
             console.log('다른 서버로부터의 응답: ' + nouns);
-            res.send(nouns);
+            nouns = nouns.replace(/"/g, '').replace("[", '').replace("]", '');
+            nouns = nouns.split(', ');
+            res.render('show_texts.ejs', {"nouns": nouns});
         });
     });
 
