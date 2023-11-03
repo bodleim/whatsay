@@ -12,6 +12,12 @@
       $(document).ready(function(){
         $('.sent_box').animate({ opacity: 0 });
         //$('#switch').click(toggle_click);
+
+        // 무작위로 섞은 배열
+var shuffledNouns = shuffleArray(nouns);
+
+// 중복이 없는 무작위 단어 배열
+var randomNouns = shuffledNouns.slice(0, 20); // 상위 20개의 단어를 선택
       })
     </script>
 
@@ -78,25 +84,25 @@
     <div class="word_box">
       <div class="line1">
         <% for (var i = 0; i < 5; i++) { %>
-          <div class="box box<%= i + 1 %>"><%= nouns[i] %></div>
+          <div class="box box<%= i + 1 %>"><%= randomNouns[i] %></div>
         <% } %>
       </div>
-      
+    
       <div class="line2">
         <% for (var i = 5; i < 10; i++) { %>
-          <div class="box box<%= i + 1 %>"><%= nouns[i] %></div>
+          <div class="box box<%= i + 1 %>"><%= randomNouns[i] %></div>
         <% } %>
       </div>
-      
+    
       <div class="line3">
         <% for (var i = 10; i < 15; i++) { %>
-          <div class="box box<%= i + 1 %>"><%= nouns[i] %></div>
+          <div class="box box<%= i + 1 %>"><%= randomNouns[i] %></div>
         <% } %>
       </div>
-      
+    
       <div class="line4">
         <% for (var i = 15; i < 20; i++) { %>
-          <div class="box box<%= i + 1 %>"><%= nouns[i] %></div>
+          <div class="box box<%= i + 1 %>"><%= randomNouns[i] %></div>
         <% } %>
       </div>
     </div>
